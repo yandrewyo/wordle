@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Wordle Clone</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <button id="howtobutton"><img src="howto.png" id="howtoimg"></button>
+      <h1>WORDLE CLONE VER 1.0.0</h1>
+      <button id="statsbutton"><img src="stats.png" id="statsimg"></button>
+    </header>
+
+    <section id="howto" class="howto-modal">
+      <div class="howto-content">
+        <span class="close">&times;</span>
+        <h2>HOW TO PLAY</h2>
+        <p>
+          Guess the word in six tries<br><br>
+          Enter a valid five letter word, press enter to submit<br><br>
+          After each guess, the tiles will change color based on accuracy:
+        </p>
+        <div id="examples">
+          <h3>Examples</h3>
+          <div class="example">
+            <table><tr><td class="correct">T</td><td>R</td><td>E</td><td>A</td><td>D</td></tr></table>
+            <p>T is in the word and in the correct spot</p>
+          </div>
+          <div class="example">
+            <table><tr><td>M</td><td class="present">U</td><td>N</td><td>C</td><td>H</td></tr></table>
+            <p>U is in the word but in an incorrect spot</p>
+          </div>
+          <div class="example">
+            <table><tr><td>S</td><td>P</td><td class="absent">O</td><td>I</td><td>L</td></tr></table>
+            <p>O is not in the word</p>
+          </div>
+        </div>
+        <p style="text-align: center">Created By Andrew Oh</p>
+      </div>
+    </section>
+    
+    <section id="game">
+      <div id="message">
+        <p></p>
+      </div>
+      <div id="board">
+        <table>
+
+        </table>
+      </div>
+
+      <div id="keyboard">
+        <div id="row-1"></div>
+        <div id="row-2"></div>
+        <div id="row-3"></div>
+      </div>
+    </section>
+
+    <section id="stats" class="stat-modal">
+      <div class="stat-content">
+        <span class="close">&times;</span>
+        <h2>STATISTICS</h2>
+        <div id="stat-container">
+          <div class="val"><h1 id="played">0</h1><p>Played</p></div>
+          <div class="val"><h1 id="wins">0%</h1><p>Win %</p></div>
+          <div class="val"><h1 id="cur-streak">0</h1><p>Current Streak</p></div>
+          <div class="val"><h1 id="max-streak">0</h1><p>Max Streak</p></div>
+        </div>
+        <h2>GUESS DISTRIBUTION</h2>
+        <div id="guess-distribution">
+            <div class="graph-row">
+              <p>1</p><div id="1" class="graph"><p></p></div>
+            </div>
+            <div class="graph-row">
+              <p>2</p><div id="2" class="graph"><p></p></div>
+            </div>
+            <div class="graph-row">
+              <p>3</p><div id="3" class="graph"><p></p></div>
+            </div>
+            <div class="graph-row">
+              <p>4</p><div id="4" class="graph"><p></p></div>
+            </div>
+            <div class="graph-row">
+              <p>5</p><div id="5" class="graph"<p></p></div>
+            </div>
+            <div class="graph-row">
+              <p>6</p><div id="6" class="graph"><p></p></div>
+            </div>
+        </div>
+        <h3>Following completion, exit and press ENTER to play again</h3>
+      </div>
+    </section>
+  </body>
+</html>
